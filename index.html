@@ -15,7 +15,6 @@
       --card-bg: #ffffff;
       --card-border: #cbd5e1;
 
-      /* عناصر رسمتك */
       --sun-btn-bg: #facc15;
       --sun-btn-border: #eab308;
       --motivate-border: #1d4ed8;
@@ -23,7 +22,6 @@
       --cloud-fill: #2563eb;
       --cloud-hover: #1d4ed8;
       --cloud-stroke: #000000;
-      --teal-accent: #0ea5e9;
     }
 
     body.dark-mode {
@@ -57,7 +55,6 @@
       padding-bottom: 50px;
     }
 
-    /* الشريط العلوي: الاسم يسار وزر الوضع الليلي يمين */
     .top-bar {
       max-width: 900px;
       margin: 0 auto;
@@ -71,7 +68,6 @@
       font-size: 1.45rem;
       font-weight: 800;
       color: var(--text-main);
-      letter-spacing: -0.3px;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -96,7 +92,6 @@
       transform: scale(1.08);
     }
 
-    /* الصفحة الرئيسية (الواجهة) */
     .home-view {
       max-width: 680px;
       margin: 16px auto 0;
@@ -107,13 +102,17 @@
       gap: 26px;
     }
 
-    /* المربع بإطار أزرق ووسط أخضر فاتح مائل للأزرق */
+    .home-view.hidden {
+      display: none !important;
+    }
+
+    /* المربع الأخضر المزرق بالتشجيع */
     .motivation-box {
       width: 100%;
       border: 3.5px solid var(--motivate-border);
       background: linear-gradient(135deg, var(--motivate-bg) 0%, #bae6fd 100%);
       border-radius: 22px;
-      padding: 24px 22px;
+      padding: 26px 22px;
       text-align: center;
       box-shadow: 0 8px 20px rgba(29, 78, 216, 0.12);
     }
@@ -123,35 +122,30 @@
     }
 
     .motivation-box h2 {
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       font-weight: 800;
       color: #0f172a;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     body.dark-mode .motivation-box h2 {
       color: #ffffff;
     }
 
-    .motivation-box p.en-desc {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #1e293b;
-      margin-bottom: 10px;
-    }
-
-    .motivation-box p.ar-desc {
+    .motivation-box p.encourage-text {
       font-family: 'Cairo', sans-serif;
-      font-size: 0.92rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: #064e3b;
       direction: rtl;
+      line-height: 1.6;
     }
 
-    body.dark-mode .motivation-box p.en-desc { color: #e2e8f0; }
-    body.dark-mode .motivation-box p.ar-desc { color: #a7f3d0; }
+    body.dark-mode .motivation-box p.encourage-text {
+      color: #a7f3d0;
+    }
 
-    /* الغيوم الثلاث للمستويات */
+    /* غيوم المستويات */
     .clouds-stack {
       width: 100%;
       display: flex;
@@ -179,10 +173,6 @@
       transform: translateY(-4px) scale(1.03);
     }
 
-    .cloud-btn:active {
-      transform: scale(0.98);
-    }
-
     .cloud-svg {
       position: absolute;
       inset: 0;
@@ -193,18 +183,12 @@
       stroke-width: 4.5px;
       stroke-linejoin: round;
       filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.14));
-      transition: fill 0.2s ease;
-    }
-
-    .cloud-btn:hover .cloud-svg {
-      fill: var(--cloud-hover);
     }
 
     .cloud-label {
       position: relative;
       z-index: 2;
       text-align: center;
-      color: #000000;
       padding-top: 10px;
     }
 
@@ -225,7 +209,7 @@
       margin-top: 2px;
     }
 
-    /* صفحة قائمة المهام (تظهر عند الضغط على غيمة) */
+    /* صفحة المهام */
     .tasks-view {
       display: none;
       max-width: 1120px;
@@ -234,11 +218,7 @@
     }
 
     .tasks-view.active {
-      display: block;
-    }
-
-    .home-view.hidden {
-      display: none;
+      display: block !important;
     }
 
     .tasks-header {
@@ -270,10 +250,6 @@
       font-weight: 700;
       font-size: 0.88rem;
       cursor: pointer;
-    }
-
-    .back-btn:hover {
-      background: var(--cloud-hover);
     }
 
     .selected-lvl-title {
@@ -468,31 +444,22 @@
       color: var(--text-main);
       outline: none;
     }
-
-    @media (max-width: 520px) {
-      .cards-grid { grid-template-columns: 1fr; }
-      .app-logo { font-size: 1.25rem; }
-    }
   </style>
 </head>
 <body>
 
-  <!-- الشريط العلوي -->
   <div class="top-bar">
     <div class="app-logo">StepUp English 🗒️</div>
-    <button class="theme-btn" id="theme-btn" onclick="toggleDarkMode()" title="Toggle Dark Mode">☀️</button>
+    <button class="theme-btn" id="theme-btn" onclick="toggleDarkMode()">☀️</button>
   </div>
 
-  <!-- الواجهة الرئيسية (الصندوق الأخضر المزرق + 3 غيوم) -->
   <div class="home-view" id="home-view">
     <div class="motivation-box">
-      <h2>✨ Every day is a step closer to fluency!</h2>
-      <p class="en-desc">An elegant, level-based learning guide designed to master English through focused daily tasks that develop listening, reading, and speaking skills in 30-day cycles for each level.</p>
-      <p class="ar-desc">دليل تعلم أنيق ومقسم حسب المستويات، صُمم لإتقان اللغة الإنجليزية عبر مهام مركزة لتطوير مهارات الاستماع، القراءة، والتحدث اليومية في دورات مدتها 30 يوماً لكل مستوى.</p>
+      <h2>🚀 استمراري اليومي هو سر نجاحي وتفوقي!</h2>
+      <p class="encourage-text">ثقي بنفسكِ، فكل خطوة صغيرة تخطينها اليوم تقربكِ أكثر نحو إتقان اللغة بطلاقة وثقة مطلقة. أنتِ لها!</p>
     </div>
 
     <div class="clouds-stack">
-      <!-- الغيمة 1 -->
       <button class="cloud-btn" onclick="openLevel('A0_A1')">
         <svg class="cloud-svg" viewBox="0 0 320 135" preserveAspectRatio="none">
           <path d="M75,118 C40,118 18,98 22,74 C25,54 44,42 66,44 C76,22 104,10 134,15 C154,6 184,8 202,24 C228,18 258,30 266,52 C288,56 304,74 300,94 C296,112 276,118 248,118 Z" />
@@ -503,7 +470,6 @@
         </div>
       </button>
 
-      <!-- الغيمة 2 -->
       <button class="cloud-btn" onclick="openLevel('A2_B1')">
         <svg class="cloud-svg" viewBox="0 0 320 135" preserveAspectRatio="none">
           <path d="M75,118 C40,118 18,98 22,74 C25,54 44,42 66,44 C76,22 104,10 134,15 C154,6 184,8 202,24 C228,18 258,30 266,52 C288,56 304,74 300,94 C296,112 276,118 248,118 Z" />
@@ -514,7 +480,6 @@
         </div>
       </button>
 
-      <!-- الغيمة 3 -->
       <button class="cloud-btn" onclick="openLevel('B1_B2')">
         <svg class="cloud-svg" viewBox="0 0 320 135" preserveAspectRatio="none">
           <path d="M75,118 C40,118 18,98 22,74 C25,54 44,42 66,44 C76,22 104,10 134,15 C154,6 184,8 202,24 C228,18 258,30 266,52 C288,56 304,74 300,94 C296,112 276,118 248,118 Z" />
@@ -527,7 +492,6 @@
     </div>
   </div>
 
-  <!-- صفحة عرض مهام الـ 30 يوماً -->
   <div class="tasks-view" id="tasks-view">
     <div class="tasks-header">
       <div class="tasks-top-row">
@@ -907,4 +871,14 @@
               { day: 26, skillEn: "READING & WRITING", skillAr: "القراءة والكتابة", titleEn: "Someone you admire", titleAr: "شخص تُعجب به", tasks: [
                 { en: "Read — read one page or a short article about someone you admire.", ar: "اقرأ: صفحة أو مقالاً قصيراً عن شخص تُعجب به." },
                 { en: "Summarize — write a 4–5 sentence summary of what you just read.", ar: "لخّص: ملخصاً من 4–5 جمل." },
-                { en: "Write 
+                { en: "Write — write your own opinion about someone you admire in a short paragraph.", ar: "اكتب: فقرة قصيرة عن شخص تُعجب به." },
+                { en: "Vocabulary — list 5 new words from your reading with their meaning.", ar: "المفردات: 5 كلمات جديدة مع معانيها." }
+              ]},
+              { day: 27, skillEn: "VOCABULARY & GRAMMAR", skillAr: "المفردات والقواعد", titleEn: "A piece of life advice", titleAr: "نصيحة في الحياة", tasks: [
+                { en: "Learn — learn 10 new words related to a piece of life advice, write one example sentence for each.", ar: "تعلّم: 10 كلمات مرتبطة بنصيحة في الحياة مع مثال لكل كلمة." },
+                { en: "Grammar — pick one grammar point and write 5 sentences using it.", ar: "القواعد: اختر قاعدة واكتب 5 جمل." },
+                { en: "Use it — use 3 of today's new words in a real chat with AI.", ar: "استخدمها: 3 كلمات في محادثة." },
+                { en: "Quiz — cover your word list and try to recall all 10 words from memory.", ar: "اختبر نفسك: تذكّر الكلمات العشر." }
+              ]},
+              { day: 28, skillEn: "SPEAKING & PRONUNCIATION", skillAr: "التحدث والنطق", titleEn: "Your evening routine", titleAr: "روتينك المسائي", tasks: [
+                { en: "Record — record yourself tal
