@@ -106,7 +106,6 @@
       display: none !important;
     }
 
-    /* المربع الأخضر المزرق بالتشجيع */
     .motivation-box {
       width: 100%;
       border: 3.5px solid var(--motivate-border);
@@ -145,7 +144,6 @@
       color: #a7f3d0;
     }
 
-    /* غيوم المستويات */
     .clouds-stack {
       width: 100%;
       display: flex;
@@ -209,7 +207,6 @@
       margin-top: 2px;
     }
 
-    /* صفحة المهام */
     .tasks-view {
       display: none;
       max-width: 1120px;
@@ -450,7 +447,7 @@
 
   <div class="top-bar">
     <div class="app-logo">StepUp English 🗒️</div>
-    <button class="theme-btn" id="theme-btn" onclick="toggleDarkMode()">☀️</button>
+    <button class="theme-btn" id="theme-btn" type="button">☀️</button>
   </div>
 
   <div class="home-view" id="home-view">
@@ -460,7 +457,7 @@
     </div>
 
     <div class="clouds-stack">
-      <button class="cloud-btn" onclick="openLevel('A0_A1')">
+      <button class="cloud-btn" type="button" data-level="A0_A1">
         <svg class="cloud-svg" viewBox="0 0 320 135" preserveAspectRatio="none">
           <path d="M75,118 C40,118 18,98 22,74 C25,54 44,42 66,44 C76,22 104,10 134,15 C154,6 184,8 202,24 C228,18 258,30 266,52 C288,56 304,74 300,94 C296,112 276,118 248,118 Z" />
         </svg>
@@ -470,7 +467,7 @@
         </div>
       </button>
 
-      <button class="cloud-btn" onclick="openLevel('A2_B1')">
+      <button class="cloud-btn" type="button" data-level="A2_B1">
         <svg class="cloud-svg" viewBox="0 0 320 135" preserveAspectRatio="none">
           <path d="M75,118 C40,118 18,98 22,74 C25,54 44,42 66,44 C76,22 104,10 134,15 C154,6 184,8 202,24 C228,18 258,30 266,52 C288,56 304,74 300,94 C296,112 276,118 248,118 Z" />
         </svg>
@@ -480,7 +477,7 @@
         </div>
       </button>
 
-      <button class="cloud-btn" onclick="openLevel('B1_B2')">
+      <button class="cloud-btn" type="button" data-level="B1_B2">
         <svg class="cloud-svg" viewBox="0 0 320 135" preserveAspectRatio="none">
           <path d="M75,118 C40,118 18,98 22,74 C25,54 44,42 66,44 C76,22 104,10 134,15 C154,6 184,8 202,24 C228,18 258,30 266,52 C288,56 304,74 300,94 C296,112 276,118 248,118 Z" />
         </svg>
@@ -495,7 +492,7 @@
   <div class="tasks-view" id="tasks-view">
     <div class="tasks-header">
       <div class="tasks-top-row">
-        <button class="back-btn" onclick="goHome()">← Back to Levels</button>
+        <button class="back-btn" id="back-btn" type="button">← Back to Levels</button>
         <div class="selected-lvl-title" id="selected-lvl-title">A0 – A1 Beginner</div>
       </div>
       <div class="progress-bar-row">
@@ -881,4 +878,4 @@
                 { en: "Quiz — cover your word list and try to recall all 10 words from memory.", ar: "اختبر نفسك: تذكّر الكلمات العشر." }
               ]},
               { day: 28, skillEn: "SPEAKING & PRONUNCIATION", skillAr: "التحدث والنطق", titleEn: "Your evening routine", titleAr: "روتينك المسائي", tasks: [
-                { en: "Record — record yourself tal
+                { en: "Record — record yourself talking about your evening routine for 2 minutes, no notes.", ar: "سجّل: حديثاً لم
