@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>30 Days English Roadmap | A0–B2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal-primary: #2bb3c0;
+      --teal-dark: #1d8f9b;
+      --teal-light: #e6f7f9;
+      --teal-border: #bce8ed;
+      --bg-page: #f5f9fa;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --heart-empty: #cbd5e1;
+      --heart-filled: #2bb3c0;
+      --shadow-sm: 0 4px 12px rgba(29, 143, 155, 0.06);
+      --shadow-md: 0 8px 24px rgba(29, 143, 155, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.5;
+      padding-bottom: 60px;
+    }
+
+    /* Header & Hero */
+    header {
+      background: linear-gradient(135deg, #ffffff 0%, var(--teal-light) 100%);
+      border-bottom: 1px solid var(--teal-border);
+      padding: 28px 20px 24px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+
+    .brand-tag {
+      display: inline-block;
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--teal-border);
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    header h1 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    header p.subtitle {
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.95rem;
+      color: var(--teal-dark);
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    /* Level Selector Tabs */
+    .level-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      max-width: 720px;
+      margin: 0 auto 16px;
+    }
+
+    .level-btn {
+      background: #ffffff;
+      border: 2px solid var(--teal-border);
+      color: var(--text-main);
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 150px;
+    }
+
+    .level-btn span.lvl-sub {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      font-family: 'Cairo', sans-serif;
+    }
+
+    .level-btn:hover {
+      border-color: var(--teal-primary);
+      transform: translateY(-2px);
+    }
+
+    .level-btn.active {
+      background: var(--teal-primary);
+      border-color: var(--teal-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(43, 179, 192, 0.3);
+    }
+
+    .level-btn.active span.lvl-sub {
+      color: #e6f7f9;
+    }
+
+    /* Progress Bar & Controls */
+    .controls-bar {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding-top: 8px;
+    }
+
+    .progress-wrap {
+      flex: 1;
+      min-width: 240px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .progress-track {
+      flex: 1;
+      height: 10px;
+      background: #e2e8f0;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--teal-primary);
+      width: 0%;
+      transition: width 0.3s ease;
+      border-radius: 99px;
+    }
+
+    .progress-text {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--teal-dark);
+      white-space: nowrap;
+    }
+
+    .toggle-ar-btn {
+      background: #ffffff;
+      border: 1px solid var(--teal-border);
+      color: var(--teal-dark);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .toggle-ar-btn:hover {
+      background: var(--teal-light);
+    }
+
+    /* Main Container */
+    main {
+      max-width: 1180px;
+      margin: 28px auto 0;
+      padding: 0 18px;
+    }
+
+    /* Guide Banner */
+    .guide-box {
+      background: #ffffff;
+      border: 1px solid var(--teal-border);
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .guide-box .en-tip {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .guide-box .ar-tip {
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.88rem;
+      color: var(--teal-dark);
+      direction: rtl;
+    }
+
+    /* Week Section */
+    .week-section {
+      margin-bottom: 36px;
+    }
+
+    .week-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--teal-light);
+    }
+
+    .week-badge {
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--teal-border);
+    }
+
+    .week-ar {
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 20px;
+    }
+
+    .day-card {
+      background: var(--card-bg);
+      border: 1.5px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+    }
+
+    .day-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--teal-border);
+    }
+
+    .day-card.completed {
+      border-color: var(--teal-primary);
+      background: linear-gradient(180deg, #ffffff 0%, #f2fbfc 100%);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .day-pill {
+      background: var(--teal-primary);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 8px;
+      letter-spacing: 0.4px;
+    }
+
+    .skill-tag {
+      text-align: right;
+    }
+
+    .skill-en {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--teal-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .skill-ar {
+      display: block;
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      direction: rtl;
+    }
+
+    .card-title-box {
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #e2e8f0;
+    }
+
+    .card-title-en {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .card-title-ar {
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--teal-dark);
+      direction: rtl;
+      margin-top: 2px;
+    }
+
+    /* Tasks List */
+    .tasks-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .task-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+      padding: 6px 8px;
+      border-radius: 10px;
+      transition: background 0.15s ease;
+    }
+
+    .task-item:hover {
+      background: #f8fafc;
+    }
+
+    .heart-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.15rem;
+      color: var(--heart-empty);
+      line-height: 1.2;
+      padding-top: 2px;
+      transition: transform 0.2s ease, color 0.2s ease;
+      user-select: none;
+    }
+
+    .task-item.done .heart-btn {
+      color: var(--heart-filled);
+      transform: scale(1.15);
+    }
+
+    .task-content {
+      flex: 1;
+    }
+
+    .task-en {
+      font-size: 0.85rem;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .task-item.done .task-en {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+
+    .task-ar {
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      direction: rtl;
+      margin-top: 3px;
+    }
+
+    body.hide-ar .task-ar,
+    body.hide-ar .card-title-ar,
+    body.hide-ar .skill-ar,
+    body.hide-ar .ar-tip,
+    body.hide-ar .week-ar {
+      display: none;
+    }
+
+    /* Today's Note */
+    .note-box {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .note-input {
+      width: 100%;
+      border: none;
+      border-bottom: 1.5px dashed var(--teal-border);
+      background: transparent;
+      padding: 6px 4px;
+      font-family: inherit;
+      font-size: 0.82rem;
+      color: var(--text-main);
+      outline: none;
+    }
+
+    .note-input:focus {
+      border-bottom-color: var(--teal-primary);
+      background: #f8fcfd;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer strong {
+      color: var(--teal-dark);
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.35rem; }
+      .level-btn { min-width: 105px; padding: 8px 12px; font-size: 0.85rem; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand-tag">30 DAYS ENGLISH TO DO LIST • Learn • Practice • Speak</div>
+    <h1>30-Day English Learning Roadmap</h1>
+    <p class="subtitle">قائمة مهام تعلم اللغة الإنجليزية لمدة 30 يوماً — من الصفر إلى الاحتراف</p>
+
+    <div class="level-tabs">
+      <button class="level-btn active" onclick="switchLevel('A0_A1')" id="btn-A0_A1">
+        A0 – A1
+        <span class="lvl-sub">Beginner (المستوى المبتدئ)</span>
+      </button>
+      <button class="level-btn" onclick="switchLevel('A2_B1')" id="btn-A2_B1">
+        A2 – B1
+        <span class="lvl-sub">Intermediate (المستوى المتوسط)</span>
+      </button>
+      <button class="level-btn" onclick="switchLevel('B1_B2')" id="btn-B1_B2">
+        B1 – B2
+        <span class="lvl-sub">Upper / Advanced (المتقدم)</span>
+      </button>
+    </div>
+
+    <div class="controls-bar">
+      <div class="progress-wrap">
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-text" id="progress-text">0 / 30 Days Completed (0%)</div>
+      </div>
+      <button class="toggle-ar-btn" onclick="toggleArabic()" id="toggle-ar-btn">إخفاء الترجمة العربية</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="guide-box">
+      <div class="en-tip">💡 Check the heart next to each task once done — fill all hearts to complete the day!</div>
+      <div class="ar-tip">اضغط على القلب بجانب كل مهمة عند إكمالها لإتمام تحدي اليوم وملء شريط التقدم.</div>
+    </div>
+
+    <div id="roadmap-container"></div>
+  </main>
+
+  <footer>
+    <p><strong>30-Day English Challenge</strong> • Designed as a structured self-study & student collaboration resource.</p>
+  </footer>
+
+  <script>
+    const ROADMAP_DATA = {
+      "A0_A1": {
+        title: "Beginner Level (A0 – A1)",
+        weeks: [
+          {
+            week: "Week 1 • Days 1–6",
+            weekAr: "الأسبوع الأول: الأيام 1–6",
+            days: [
+              {
+                day: 1, skillEn: "SPEAKING & VOCAB", skillAr: "المفردات والتحدث",
+                titleEn: "Your introduction", titleAr: "مقدمة عن نفسك",
+                tasks: [
+                  { en: "Learn — name, age, country, student, live.", ar: "تعلّم: الاسم، العمر، البلد، طالب، يعيش." },
+                  { en: "Practice — 5 simple sentences about yourself.", ar: "تدرّب: اكتب 5 جمل بسيطة عن نفسك." },
+                  { en: "Speak — record a 30-second self-introduction.", ar: "تحدّث: سجّل تعريفاً بنفسك لمدة 30 ثانية." }
+                ]
+              },
+              {
+                day: 2, skillEn: "SPEAKING", skillAr: "التحدث",
+                titleEn: "Greetings", titleAr: "التحيات",
+                tasks: [
+                  { en: "Learn — hello, hi, good morning, goodbye.", ar: "تعلّم: مرحباً، أهلاً، صباح الخير، إلى اللقاء." },
+                  { en: "Practice — How are you? — I'm fine, thank you.", ar: "تدرّب: كيف حالك؟ أنا بخير، شكراً لك." },
+                  { en: "Speak — say the mini dialogue aloud 3 times.", ar: "تحدّث: قل الحوار القصير بصوت عالٍ 3 مرات." }
+                ]
+              },
+              {
+                day: 3, skillEn: "VOCAB & NUMBERS", skillAr: "المفردات والأرقام",
+                titleEn: "Numbers 1–20", titleAr: "الأرقام من 1 إلى 20",
+                tasks: [
+                  { en: "Learn — numbers 1 to 20.", ar: "تعلّم: الأرقام من 1 إلى 20." },
+                  { en: "Practice — write and say 10 numbers.", ar: "تدرّب: اكتب 10 أرقام وقلها بصوت عالٍ." },
+                  { en: "Challenge — say your age and 3 random numbers.", ar: "تحدّ: قل عمرك و3 أرقام عشوائية." }
+                ]
+              },
+              {
+                day: 4, skillEn: "PRONUNCIATION", skillAr: "النطق",
+                titleEn: "The alphabet", titleAr: "الأبجدية",
+                tasks: [
+                  { en: "Review — A–Z and the letter sounds.", ar: "راجع: الحروف من A إلى Z وأصواتها." },
+                  { en: "Practice — spell your name and 5 easy words.", ar: "تدرّب: تهجّ اسمك و5 كلمات سهلة." },
+                  { en: "Speak — say the alphabet aloud once.", ar: "تحدّث: قل الأبجدية بصوت عالٍ مرة واحدة." }
+                ]
+              },
+              {
+                day: 5, skillEn: "VOCABULARY", skillAr: "المفردات",
+                titleEn: "Colors", titleAr: "الألوان",
+                tasks: [
+                  { en: "Learn — red, blue, green, yellow, black, white, pink, orange.", ar: "تعلّم: أحمر، أزرق، أخضر، أصفر، أسود، أبيض، وردي، برتقالي." },
+                  { en: "Write — 5 sentences: It is red. My bag is black.", ar: "اكتب: 5 جمل (إنه أحمر. حقيبتي سوداء)." },
+                  { en: "Speak — name 5 colors you can see.", ar: "تحدّث: سمِّ 5 ألوان يمكنك رؤيتها." }
+                ]
+              },
+              {
+                day: 6, skillEn: "VOCAB & SPEAKING", skillAr: "المفردات والتحدث",
+                titleEn: "My family", titleAr: "عائلتي",
+                tasks: [
+                  { en: "Learn — mother, father, sister, brother, grandmother, grandfather.", ar: "تعلّم: الأم، الأب، الأخت، الأخ، الجدة، الجد." },
+                  { en: "Practice — This is my... / These are my...", ar: "تدرّب: هذا/هذه... / هؤلاء..." },
+                  { en: "Speak — talk about your family in 5 sentences.", ar: "تحدّث: تحدّث عن عائلتك في 5 جمل." }
+                ]
+              }
+            ]
+          },
+          {
+            week: "Week 2 • Days 7–12",
+            weekAr: "الأسبوع الثاني: الأيام 7–12",
+            days: [
+              {
+                day: 7, skillEn: "REVIEW & SPEAKING", skillAr: "المراجعة والتحدث",
+                titleEn: "Review: Week 1", titleAr: "مراجعة الأسبوع الأول",
+                tasks: [
+                  { en: "Review — Days 1–6 vocabulary.", ar: "راجع: مفردات الأيام 1–6." },
+                  { en: "Write — 10 simple sentences using words you remember.", ar: "اكتب: 10 جمل بسيطة باستخدام الكلمات التي تتذكرها." },
+                  { en: "Speak — introduce yourself and your family for 1 minute.", ar: "تحدّث: قدّم نفسك وعائلتك لمدة دقيقة واحدة." }
+                ]
+              },
+              {
+                day: 8, skillEn: "EVERYDAY ENGLISH", skillAr: "الإنجليزية اليومية",
+                titleEn: "My daily routine", titleAr: "روتيني اليومي",
+                tasks: [
+                  { en: "Learn — wake up, eat, study, go, come home, sleep.", ar: "تعلّم: أستيقظ، آكل، أدرس، أذهب، أعود إلى المنزل، أنام." },
+                  { en: "Order — put your daily actions in the correct order.", ar: "رتّب: ضع أفعالك اليومية بالترتيب الصحيح." },
+                  { en: "Speak — say your routine using simple sentences.", ar: "تحدّث: تحدّث عن روتينك باستخدام جمل بسيطة." }
+                ]
+              },
+              {
+                day: 9, skillEn: "VOCABULARY", skillAr: "المفردات",
+                titleEn: "Days & time", titleAr: "الأيام والوقت",
+                tasks: [
+                  { en: "Learn — Monday–Sunday + today, tomorrow, yesterday.", ar: "تعلّم: من الاثنين إلى الأحد + اليوم، غداً، أمس." },
+                  { en: "Practice — say 5 simple times.", ar: "تدرّب: قل 5 أوقات بسيطة." },
+                  { en: "Speak — say the day and when you wake up.", ar: "تحدّث: قل اسم اليوم ومتى تستيقظ." }
+                ]
+              },
+              {
+                day: 10, skillEn: "VOCABULARY", skillAr: "المفردات",
+                titleEn: "Food & drinks", titleAr: "الأطعمة والمشروبات",
+                tasks: [
+                  { en: "Learn — 10 easy food and drink words.", ar: "تعلّم: 10 كلمات سهلة عن الأطعمة والمشروبات." },
+                  { en: "Practice — I like... / I don't like...", ar: "تدرّب: أنا أحب... / أنا لا أحب..." },
+                  { en: "Speak — talk about 5 foods you like.", ar: "تحدّث: تحدّث عن 5 أطعمة تحبها." }
+                ]
+              },
+              {
+                day: 11, skillEn: "VOCAB & GRAMMAR", skillAr: "المفردات والقواعد",
+                titleEn: "Things around me", titleAr: "الأشياء من حولي",
+                tasks: [
+                  { en: "Learn — book, pen, phone, table, chair, door, bag, window.", ar: "تعلّم: كتاب، قلم، هاتف، طاولة، كرسي، باب، حقيبة، نافذة." },
+                  { en: "Practice — This is a... / These are...", ar: "تدرّب: هذا/هذه... / هذه..." },
+                  { en: "Challenge — name 10 objects around you.", ar: "تحدّ: سمِّ 10 أشياء من حولك." }
+                ]
+              },
+              {
+                day: 12, skillEn: "GRAMMAR", skillAr: "القواعد",
+                titleEn: "There is / There are", titleAr: "يوجد (للمفرد والجمع)",
+                tasks: [
+                  { en: "Learn — the difference between There is and There are.", ar: "تعلّم: الفرق بين There is و There are." },
+                  { en: "Write — 5 sentences about your room.", ar: "اكتب: 5 جمل عن غرفتك." },
+                  { en: "Speak — describe what you can see.", ar: "تحدّث: صف ما يمكنك رؤيته." }
+                ]
+              }
+            ]
+          },
+          {
+            week: "Week 3 • Days 13–18",
+            weekAr: "الأسبوع الثالث: الأيام 13–18",
+            days: [
+              {
+                day: 13, skillEn: "EVERYDAY ENGLISH", skillAr: "الإنجليزية اليومية",
+                titleEn: "My home", titleAr: "منزلي",
+                tasks: [
+                  { en: "Learn — bedroom, kitchen, bathroom, living room, garden.", ar: "تعلّم: غرفة النوم، المطبخ، الحمام، غرفة المعيشة، الحديقة." },
+                  { en: "Write — 5 simple sentences about your home.", ar: "اكتب: 5 جمل بسيطة عن منزلك." },
+                  { en: "Speak — talk about your home for 30 seconds.", ar: "تحدّث: تحدّث عن منزلك لمدة 30 ثانية." }
+                ]
+              },
+              {
+                day: 14, skillEn: "REVIEW & SPEAKING", skillAr: "المراجعة والتحدث",
+                titleEn: "Review: Week 2", titleAr: "مراجعة الأسبوع الثاني",
+                tasks: [
+                  { en: "Review — Days 8–13 vocabulary.", ar: "راجع: مفردات الأيام 8–13." },
+                  { en: "Write — 10 sentences about your everyday life.", ar: "اكتب: 10 جمل عن حياتك اليومية." },
+                  { en: "Speak — talk for 1 minute about your day.", ar: "تحدّث: تحدّث لمدة دقيقة عن يومك." }
+                ]
+              },
+              {
+                day: 15, skillEn: "SPEAKING", skillAr: "التحدث",
+                titleEn: "Likes & dislikes", titleAr: "ما تحب وما لا تحب",
+                tasks: [
+                  { en: "Learn — like, love, don't like, favorite.", ar: "تعلّم: يحب، يعشق، لا يحب، المفضل." },
+                  { en: "Write — 5 sentences about things you like.", ar: "اكتب: 5 جمل عن الأشياء التي تحبها." },
+                  { en: "Speak — say 3 things you like and 3 you don't.", ar: "تحدّث: قل 3 أشياء تحبها و3 أشياء لا تحبها." }
+                ]
+              },
+              {
+                day: 16, skillEn: "VOCAB & SPEAKING", skillAr: "المفردات والتحدث",
+                titleEn: "Hobbies", titleAr: "الهوايات",
+                tasks: [
+                  { en: "Learn — read, dance, sing, draw, play, watch, listen.", ar: "تعلّم: يقرأ، يرقص، يغني، يرسم، يلعب، يشاهد، يستمع." },
+                  { en: "Practice — I like + activity.", ar: "تدرّب: أنا أحب + النشاط." },
+                  { en: "Speak — talk about your favorite hobby.", ar: "تحدّث: تحدّث عن هوايتك المفضلة." }
+                ]
+              },
+              {
+                day: 17, skillEn: "GRAMMAR", skillAr: "القواعد",
+                titleEn: "Can / Can't", titleAr: "القدرة (أستطيع / لا أستطيع)",
+                tasks: [
+                  { en: "Learn — how to use can and can't.", ar: "تعلّم: كيفية استخدام can و can't." },
+                  { en: "Write — 5 sentences: I can... / I can't...", ar: "اكتب: 5 جمل (أنا أستطيع... / لا أستطيع...)." },
+                  { en: "Speak — say 3 things you can do and 2 you can't.", ar: "تحدّث: قل 3 أشياء تستطيع فعلها وشيئين لا تستطيع فعلهما." }
+                ]
+              },
+              {
+                day: 18, skillEn: "SPEAKING", skillAr: "التحدث",
+                titleEn: "Simple questions", titleAr: "أسئلة بسيطة",
+                tasks: [
+                  { en: "Practice — What is your name? Where are you from? How old are you?", ar: "تدرّب: ما اسمك؟ من أين أنت؟ كم عمرك؟" },
+                  { en: "Answer — answer each question in a full sentence.", ar: "أجب: أجب عن كل سؤال بجملة كاملة." },
+                  { en: "Speak — ask and answer the questions aloud.", ar: "تحدّث: اطرح الأسئلة وأجب عنها بصوت عالٍ." }
+                ]
+              }
+            ]
+          },
+          {
+            week: "Week 4 • Days 19–24",
+            weekAr: "الأسبوع الرابع: الأيام 19–24",
+            days: [
+              {
+                day: 19, skillEn: "EVERYDAY ENGLISH", skillAr: "الإنجليزية اليومية",
+                titleEn: "Shopping", titleAr: "التسوق",
+                tasks: [
+                  { en: "Learn — buy, price, money, cheap, expensive, please, thank you.", ar: "تعلّم: يشتري، السعر، المال، رخيص، غالٍ، من فضلك، شكراً لك." },
+                  { en: "Practice — How much is it? — It is...", ar: "تدرّب: كم سعره؟ إنه..." },
+                  { en: "Role-play — ask for one item and say thank you.", ar: "مثّل الدور: اطلب غرضاً واحداً وقل شكراً." }
+                ]
+              },
+              {
+                day: 20, skillEn: "VOCABULARY", skillAr: "المفردات",
+                titleEn: "At school", titleAr: "في المدرسة",
+                tasks: [
+                  { en: "Learn — teacher, student, class, lesson, homework, exam, notebook.", ar: "تعلّم: معلم، طالب، قسم، درس، واجب منزلي، امتحان، دفتر." },
+                  { en: "Write — 5 sentences about school.", ar: "اكتب: 5 جمل عن المدرسة." },
+                  { en: "Speak — talk about your favorite subject.", ar: "تحدّث: تحدّث عن مادتك المفضلة." }
+                ]
+              },
+              {
+                day: 21, skillEn: "REVIEW & SPEAKING", skillAr: "المراجعة والتحدث",
+                titleEn: "Review: Week 3", titleAr: "مراجعة الأسبوع الثالث",
+                tasks: [
+                  { en: "Review — Days 15–20.", ar: "راجع: الأيام 15–20." },
+                  { en: "Write — a short everyday dialogue.", ar: "اكتب: حواراً يومياً قصيراً." },
+                  { en: "Speak — act out the dialogue twice.", ar: "تحدّث: مثّل الحوار مرتين." }
+                ]
+              },
+              {
+                day: 22, skillEn: "VOCABULARY", skillAr: "المفردات",
+                titleEn: "Describing people", titleAr: "وصف الأشخاص",
+                tasks: [
+                  { en: "Learn — tall, short, young, old, kind, funny, happy, quiet.", ar: "تعلّم: طويل، قصير، شاب، كبير في السن، لطيف، مضحك، سعيد، هادئ." },
+                  { en: "Practice — He is... / She is...", ar: "تدرّب: هو... / هي..." },
+                  { en: "Speak — describe a person in 5 sentences.", ar: "تحدّث: صف شخصاً في 5 جمل." }
+                ]
+              },
+              {
+                day: 23, skillEn: "VOCAB & SPEAKING", skillAr: "المفردات والتحدث",
+                titleEn: "Weather", titleAr: "الطقس",
+                tasks: [
+                  { en: "Learn — sunny, rainy, cloudy, windy, hot, cold.", ar: "تعلّم: مشمس، ممطر، غائم، عاصف، حار، بارد." },
+                  { en: "Write — 5 simple weather sentences.", ar: "اكتب: 5 جمل بسيطة عن الطقس." },
+                  { en: "Speak — describe today's weather.", ar: "تحدّث: صف طقس اليوم." }
+                ]
+              },
+              {
+                day: 24, skillEn: "EVERYDAY ENGLISH", skillAr: "الإنجليزية اليومية",
+                titleEn: "Places in town", titleAr: "أماكن في المدينة",
+                tasks: [
+                  { en: "Learn — school, shop, park, hospital, library, restaurant.", ar: "تعلّم: مدرسة، متجر، حديقة، مستشفى، مكتبة، مطعم." },
+                  { en: "Practice — I go to the...", ar: "تدرّب: أذهب إلى..." },
+                  { en: "Speak — name 5 places and say why people go there.", ar: "تحدّث: سمِّ 5 أماكن وقل لماذا يذهب الناس إليها." }
+                ]
+              }
+            ]
+          },
+          {
+            week: "Week 5 • Days 25–30",
+            weekAr: "الأسبوع الخامس: الأيام 25–30",
+            days: [
+              {
+                day: 25, skillEn: "SPEAKING", skillAr: "التحدث",
+                titleEn: "Simple directions", titleAr: "الاتجاهات البسيطة",
+                tasks: [
+                  { en: "Learn — left, right, straight, near, far.", ar: "تعلّم: اليسار، اليمين، مباشرة، قريب، بعيد." },
+                  { en: "Practice — Go straight. Turn left. Turn right.", ar: "تدرّب: اذهب مباشرة. انعطف يساراً. انعطف يميناً." },
+                  { en: "Challenge — give simple directions in your home.", ar: "تحدّ: أعطِ اتجاهات بسيطة داخل منزلك." }
+                ]
+              },
+              {
+                day: 26, skillEn: "GRAMMAR", skillAr: "القواعد",
+                titleEn: "Present simple", titleAr: "المضارع البسيط",
+                tasks: [
+                  { en: "Review — I/you/we/they + verb; he/she + verb+s.", ar: "راجع: الضمائر + الفعل، وإضافة s مع he/she." },
+                  { en: "Write — 6 sentences about your routine.", ar: "اكتب: 6 جمل عن روتينك." },
+                  { en: "Speak — talk about what you do every day.", ar: "تحدّث: تحدّث عما تفعله كل يوم." }
+                ]
+              },
+              {
+                day: 27, skillEn: "EVERYDAY ENGLISH", skillAr: "الإنجليزية اليومية",
+                titleEn: "My weekend", titleAr: "عطلة نهاية الأسبوع",
+                tasks: [
+                  { en: "Learn — Saturday, Sunday, morning, afternoon, evening, relax, visit.", ar: "تعلّم: السبت، الأحد، الصباح، بعد الظهر، المساء، يسترخي، يزور." },
+                  { en: "Write — 6 sentences about your weekend.", ar: "اكتب: 6 جمل عن عطلة نهاية الأسبوع." },
+                  { en: "Speak — talk about your ideal weekend.", ar: "تحدّث: تحدّث عن عطلة نهاية الأسبوع المثالية بالنسبة لك." }
+                ]
+              },
+              {
+                day: 28, skillEn: "REVIEW & SPEAKING", skillAr: "المراجعة والتحدث",
+                titleEn: "Review: Week 4", titleAr: "مراجعة الأسبوع الرابع",
+                tasks: [
+                  { en: "Review — Days 22–27.", ar: "راجع: الأيام 22–27." },
+                  { en: "Write — a short paragraph: My Life.", ar: "اكتب: فقرة قصيرة بعنوان (حياتي)." },
+                  { en: "Speak — read it, then say it without looking.", ar: "تحدّث: اقرأها، ثم قلها دون النظر إليها." }
+                ]
+              },
+              {
+                day: 29, skillEn: "VOCAB & SPEAKING", skillAr: "المفردات والتحدث",
+                titleEn: "Beginner challenge", titleAr: "تحدي المبتدئين",
+                tasks: [
+                  { en: "Choose — 20 words you learned this month.", ar: "اختر: 20 كلمة تعلمتها هذا الشهر." },
+                  { en: "Write — 10 sentences using your words.", ar: "اكتب: 10 جمل باستخدام كلماتك." },
+                  { en: "Speak — talk for 2 minutes: yourself, routine, likes.", ar: "تحدّث: تحدّث لمدة دقيقتين عن نفسك، روتينك، وما تحبه." }
+                ]
+              },
+              {
+                day: 30, skillEn: "FINAL REVIEW", skillAr: "المراجعة النهائية",
+                titleEn: "You did it!", titleAr: "لقد فعلتها!",
+                tasks: [
+                  { en: "Review — choose 10 favorite new words and explain them.", ar: "راجع: اختر 10 كلمات جديدة مفضلة لديك واشرحها." },
+                  { en: "Write — 8 or more sentences about yourself.", ar: "اكتب: 8 جمل أو أكثر عن نفسك." },
+                  { en: "Speak — record 2–3 minutes and compare with Day 1.", ar: "تحدّث: سجّل من دقيقتين إلى 3 دقائق وقارن مستواك باليوم الأول." }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+
+      "A2_B1": {
+        title: "Intermediate Level (A2 – B1)",
+        weeks: [
+          {
+            week: "Week 1 • Days 1–6",
+            weekAr: "الأسبوع الأول: الأيام 1–6",
+            days: [
+              {
+                day: 1, skillEn: "LISTENING & SPEAKING", skillAr: "الاستماع والتحدث",
+                titleEn: "Your ideal day", titleAr: "يومك المثالي",
+                tasks: [
+                  { en: "Watch — watch a short English cartoon or show clip (5–10 min) with subtitles on.", ar: "شاهد: شاهد مقطعاً قصيراً من رسوم متحركة أو مسلسل بالإنجليزية (5–10 دقائق) مع تشغيل الترجمة." },
+                  { en: "Listen — listen to a short video/podcast about your ideal day — note 5 new words.", ar: "استمع: استمع إلى فيديو أو بودكاست قصير عن يومك المثالي، وسجّل 5 كلمات جديدة." },
+                  { en: "Speak — speak out loud for 2 minutes about your ideal day — record yourself on your phone.", ar: "تحدّث: تحدّث بصوت عالٍ لمدة دقيقتين عن يومك المثالي، وسجّل نفسك على هاتفك." },
+                  { en: "Shadow — replay 3 sentences from what you watched and repeat them, copying the rhythm.", ar: "قلّد: أعد تشغيل 3 جمل مما شاهدته وكررها مع تقليد الإيقاع." }
+                ]
+              },
+              {
+                day: 2, skillEn: "READING & WRITING", skillAr: "القراءة والكتابة",
+                titleEn: "A dream trip", titleAr: "رحلة الأحلام",
+                tasks: [
+                  { en: "Read — read one page or a short article about a dream trip.", ar: "اقرأ: اقرأ صفحة واحدة أو مقالاً قصيراً عن رحلة أحلام." },
+                  { en: "Summarize — write a 4–5 sentence summary of what you just read.", ar: "لخّص: اكتب ملخصاً من 4–5 جمل لما قرأته للتو." },
+                  { en: "Write — write your own opinion about a dream trip in a short paragraph.", ar: "اكتب: اكتب رأيك الخاص حول رحلة أحلام في فقرة قصيرة." },
+                  { en: "Vocabulary — list 5 new words from your reading with their meaning.", ar: "المفردات: اكتب 5 كلمات جديدة من قراءتك مع معانيها." }
+                ]
+              },
+              {
+                day: 3, skillEn: "VOCABULARY & GRAMMAR", skillAr: "المفردات والقواعد",
+                titleEn: "Your favorite movie", titleAr: "فيلمك المفضل",
+                tasks: [
+                  { en: "Learn — learn 10 new words related to your favorite movie, write one example sentence for each.", ar: "تعلّم: تعلّم 10 كلمات جديدة مرتبطة بفيلمك المفضل، واكتب جملة مثال لكل كلمة." },
+                  { en: "Grammar — pick one grammar point (tense, connector...) and write 5 sentences using it.", ar: "القواعد: اختر نقطة قواعد واحدة (زمن، أداة ربط...) واكتب 5 جمل باستخدامها." },
+                  { en: "Use it — use 3 of today's new words in a real chat with AI/ChatGPT.", ar: "استخدمها: استخدم 3 من كلمات اليوم الجديدة في محادثة حقيقية مع الذكاء الاصطناعي." },
+                  { en: "Quiz — cover your word list and try to recall all 10 words from memory.", ar: "اختبر نفسك: غطِّ قائمة كلماتك وحاول تذكّر الكلمات العشر كلها من الذاكرة." }
+                ]
+              },
+              {
+                day: 4, skillEn: "SPEAKING & PRONUNCIATION", skillAr: "التحدث والنطق",
+                titleEn: "Technology and you", titleAr: "التكنولوجيا وأنت",
+                tasks: [
+                  { en: "Record — record yourself talking about technology and you for 2 minutes, no notes.", ar: "سجّل: سجّل نفسك وأنت تتحدث عن التكنولوجيا وأنت لمدة دقيقتين دون ملاحظات." },
+                  { en: "Pronounce — practice 5 words you find hard to pronounce — slowly, then at normal speed.", ar: "انطق: تدرّب على نطق 5 كلمات تجد صعوبة في نطقها، ببطء ثم بالسرعة العادية." },
+                  { en: "Talk — have a 10-minute voice conversation with an AI about technology and you.", ar: "تحدّث: أجرِ محادثة صوتية لمدة 10 دقائق مع ذكاء اصطناعي حول التكنولوجيا وأنت." },
+                  { en: "Imitate — pick one sentence from a video and copy its accent and intonation exactly.", ar: "قلّد: اختر جملة واحدة من فيديو وقلّد لهجتها ونبرتها تماماً." }
+                ]
+              },
+              {
+                day: 5, skillEn: "LISTENING & CULTURE", skillAr: "الاستماع والثقافة",
+                titleEn: "A childhood memory", titleAr: "ذكرى من الطفولة",
+                tasks: [
+                  { en: "Watch — watch a short movie or show scene in English with subtitles on.", ar: "شاهد: شاهد مشهداً قصيراً من فيلم أو مسلسل بالإنجليزية مع تشغيل الترجمة." },
+                  { en: "Note — write down 5 new expressions or idioms you heard in it.", ar: "دوّن: اكتب 5 تعبيرات أو عبارات اصطلاحية جديدة سمعتها فيه." },
+                  { en: "Discover — learn one fun fact about English-speaking culture linked to a childhood memory.", ar: "اكتشف: تعلّم معلومة ممتعة واحدة عن ثقافة البلدان الناطقة بالإنجليزية مرتبطة بذكرى من الطفولة." },
+                  { en: "Discuss — tell an AI what you watched and share your opinion about it.", ar: "ناقش: أخبر ذكاءً اصطناعياً بما شاهدته وشارك رأيك فيه." }
+                ]
+              },
+              {
+                day: 6, skillEn: "REVIEW & REFLECTION", skillAr: "المراجعة والتأمل",
+                titleEn: "Your goals for the year", titleAr: "أهدافك لهذا العام",
+                tasks: [
+                  { en: "Review — go back over this week's new words, use each one in a new sentence.", ar: "راجع: راجع الكلمات الجديدة لهذا الأسبوع، واستخدم كل كلمة في جملة جديدة." },
+                  { en: "Journal — write a short journal entry about your goals for the year using words you learned this week.", ar: "اكتب في مذكراتك: اكتب تدوينة قصيرة عن أهدافك لهذا العام مستخدماً الكلمات التي تعلمتها هذا الأسبوع." },
+                  { en: "Explain — say out loud or tell an AI what you improved on this week.", ar: "اشرح: قل بصوت عالٍ أو أخبر ذكاءً اصطناعياً ما الذي حسّنته هذا الأسبوع." },
+                  { en: "Goal — set one small, clear goal for next week.", ar: "الهدف: حدّد هدفاً صغيراً وواضحاً للأسبوع القادم." }
+                ]
+              }
+            ]
+          },
+          {
+            week: "Week 2 • Days 7–12",
+            weekAr: "الأسبوع الثاني: الأيام 7–12",
+            days: [
+              {
+                day: 7, skillEn: "LISTENING & SPEAKING", skillAr: "الاستماع والتحدث",
+                titleEn: "Your favorite food", titleAr: "طعامك المفضل",
+                tasks: [
+                  { en: "Watch — watch a short English cartoon or show clip (5–10 min) with subtitles on.", ar: "شاهد: شاهد مقطعاً قصيراً بالإنجليزية (5–10 دقائق) مع تشغيل الترجمة." },
+                  { en: "Listen — listen to a short video/podcast about your favorite food — note 5 new words.", ar: "استمع: استمع إلى فيديو أو بودكاست قصير عن طعامك المفضل، وسجّل 5 كلمات جديدة." },
+                  { en: "Speak — speak out loud for 2 minutes about your favorite food — record yourself.", ar: "تحدّث: تحدّث بصوت عالٍ لمدة دقيقتين عن طعامك المفضل، وسجّل نفسك." },
+                  { en: "Shadow — replay 3 sentences from what you watched and repeat them, copying the rhythm.", ar: "قلّد: أعد تشغيل 3 جمل مما شاهدته وكررها مع تقليد الإيقاع." }
+                ]
+              },
+              {
+                day: 8, skillEn: "READING & WRITING", skillAr: "القراءة والكتابة",
+                titleEn: "Someone who inspires you", titleAr: "شخص يلهمك",
+                tasks: [
+                  { en: "Read — read one page or a short article about someone who inspires you.", ar: "اقرأ: اقرأ صفحة واحدة أو مقالاً قصيراً عن شخص يلهمك." },
+                  { en: "Summarize — write a 4–5 sentence summary of what you just read.", ar: "لخّص: اكتب ملخصاً من 4–5 جمل لما قرأته للتو." },
+                  { en: "Write — write your own opinion about someone who inspires you in a short paragraph.", ar: "اكتب: اكتب رأيك الخاص عن شخص يلهمك في فقرة قصيرة." },
+                  { en: "Vocabulary — list 5 new words from your reading with their meaning.", ar: "المفردات: اكتب 5 كلمات جديدة من قراءتك مع معانيها." }
+                ]
+              },
+              {
+                day: 9, skillEn: "VOCABULARY & GRAMMAR", skillAr: "المفردات والقواعد",
+                titleEn: "The environment", titleAr: "البيئة",
+                tasks: [
+                  { en: "Learn — learn 10 new words related to the environment, write one example sentence for each.", ar: "تعلّم: تعلّم 10 كلمات جديدة مرتبطة بالبيئة، واكتب جملة مثال لكل كلمة." },
+                  { en: "Grammar — pick one grammar point (tense, connector...) and write 5 sentences using it.", ar: "القواعد: اختر نقطة قواعد واحدة واكتب 5 جمل باستخدامها." },
+                  { en: "Use it — use 3 of today's new words in a real chat with AI.", ar: "استخدمها: استخدم 3 من كلمات اليوم الجديدة في محادثة حقيقية." },
+                  { en: "Quiz — cover your word list and try to recall all 10 words from memory.", ar: "اختبر نفسك: غطِّ قائمة كلماتك وحاول تذكّر الكلمات العشر كلها." }
+                ]
+              },
+              {
+                day: 10, skillEn: "SPEAKING & PRONUNCIATION", skillAr: "التحدث والنطق",
+                titleEn: "Social media", titleAr: "وسائل التواصل الاجتماعي",
+                tasks: [
+                  { en: "Record — record yourself talking about social media for 2 minutes, no notes.", ar: "سجّل: سجّل نفسك وأنت تتحدث عن وسائل التواصل الاجتماعي لمدة دقيقتين دون ملاحظات." },
+                  { en: "Pronounce — practice 5 words you find hard to pronounce — slowly, then at normal speed.", ar: "انطق: تدرّب على نطق 5 كلمات صعبة، ببطء ثم بالسرعة العادية." },
+                  { en: "Talk — have a 10-minute voice conversation with an AI about social media.", ar: "تحدّث: أجرِ محادثة صوتية لمدة 10 دقائق مع ذكاء اصطناعي حول وسائل التواصل الاجتماعي." },
+                  { en: "Imitate — pick one sentence from a video and copy its accent and intonation exactly.", ar: "قلّد: اختر جملة واحدة من فيديو وقلّد لهجتها ونبرتها تماماً." }
+                ]
+              },
+              {
+                day: 11, skillEn: "LISTENING & CULTURE", skillAr: "الاستماع والثقافة",
+                titleEn: "A book you loved", titleAr: "كتاب أحببته",
+                tasks: [
+                  { en: "Watch — watch a short movie or show scene in English with subtitles on.", ar: "شاهد: شاهد مشهداً قصيراً من فيلم أو مسلسل بالإنجليزية مع تشغيل الترجمة." },
+                  { en: "Note — write down 5 new expressions or idioms you heard in it.", ar: "دوّن: اكتب 5 تعبيرات أو عبارات اصطلاحية جديدة سمعتها فيه." },
+                  { en: "Discover — learn one fun fact about English-speaking culture linked to a book you loved.", ar: "اكتشف: تعلّم معلومة ممتعة مرتبطة بكتاب أحببته." },
+                  { en: "Discuss — tell an AI what you watched and share your opinion about it.", ar: "ناقش: أخبر ذكاءً اصطناعياً بما شاهدته وشارك رأيك فيه." }
+                ]
+              },
+              {
+                day: 12, skillEn: "REVIEW & REFLECTION", skillAr: "المراجعة والتأمل",
+                titleEn: "Your morning habits", titleAr: "عاداتك الصباحية",
+                tasks: [
+                  { en: "Review — go back over this week's new words, use each one in a new sentence.", ar: "راجع: راجع الكلمات الجديدة لهذا الأسبوع، واستخدم كل كلمة في جملة جديدة." },
+                  { en: "Journal — write a short journal entry about your morning habits using words you learned this week.", ar: "اكتب في مذكراتك: اكتب تدوينة قصيرة عن عاداتك الصباحية مستخدماً الكلمات التي تعلمتها." },
+                  { en: "Explain — say out loud or tell an AI what you improved on this week.", ar: "اشرح: قل بصوت عالٍ ما الذي حسّنته هذا الأسبوع." },
+                  { en: "Goal — set one small, clear goal for next week.", ar: "الهدف: حدّد هدفاً صغيراً وواضحاً للأسبوع القادم." }
+                ]
+              }
+            ]
+          },
+          {
+            week: "Week 3 • Days 13–18",
+            weekAr: "الأسبوع الثالث: الأيام 13–18",
+            days: [
+              {
+                day: 13, skillEn: "LISTENING & SPEAKING", skillAr: "الاستماع والتحدث",
+                titleEn: "A challenge you overcame", titleAr: "تحدٍّ تغلبت عليه",
+                tasks: [
+                  { en: "Watch — watch a short English clip (5–10 min) with subtitles on.", ar: "شاهد: شاهد مقطعاً قصيراً بالإنجليزية (5–10 دقائق) مع تشغيل الترجمة." },
+                  { en: "Listen — listen to a short video/podcast about a challenge you overcame — note 5 new words.", ar: "استمع: استمع إلى بودكاست قصير عن تحدٍّ تغلبت عليه، وسجّل 5 كلمات جديدة." },
+                  { en: "Speak — speak out loud for 2 minutes about a challenge you overcame — record yourself.", ar: "تحدّث: تحدّث بصوت عالٍ لمدة دقيقتين عن تحدٍّ تغلبت عليه، وسجّل نفسك." },
+                  { en: "Shadow — replay 3 sentences from what you watched and repeat them, copying the rhythm.", ar: "قلّد: أعد تشغيل 3 جمل مما شاهدته وكررها مع تقليد الإيقاع." }
+                ]
+              },
+              {
+                day: 14, skillEn: "READING & WRITING", skillAr: "القراءة والكتابة",
+                titleEn: "Your life in 10 years", titleAr: "حياتك بعد 10 سنوات",
+                tasks: [
+                  { en: "Read — read one page or a short article about your life in 10 years.", ar: "اقرأ: اقرأ صفحة واحدة أو مقالاً قصيراً عن حياتك بعد 10 سنوات." },
+                  { en: "Summarize — write a 4–5 sentence summary of what you just read.", ar: "لخّص: اكتب ملخصاً من 4–5 جمل لما قرأته للتو." },
+                  { en: "Write — write your own opinion about your life in 10 years in a short paragraph.", ar: "اكتب: اكتب رأيك الخاص عن حياتك بعد 10 سنوات في فقرة قصيرة." },
+                  { en: "Vocabulary — list 5 new words from your reading with their meaning.", ar: "المفردات: اكتب 5 كلمات جديدة من قراءتك مع معانيها." }
+                ]
+              },
+              {
+                day: 15, skillEn: "VOCABULARY & GRAMMAR", skillAr: "المفردات والقواعد",
+                titleEn: "Your hometown", titleAr: "مسقط رأسك",
+                tasks: [
+                  { en: "Learn — learn 10 new words related to your hometown, write one example sentence for each.", ar: "تعلّم: تعلّم 10 كلمات جديدة مرتبطة بمسقط رأسك، واكتب جملة مثال لكل كلمة." },
+                  { en: "Grammar — pick one grammar point and write 5 sentences using it.", ar: "القواعد: اختر نقطة قواعد واحدة واكتب 5 جمل باستخدامها." },
+                  { en: "Use it — use 3 of today's new words in a real chat with AI.", ar: "استخدمها: استخدم 3 من كلمات اليوم الجديدة في محادثة حقيقية." },
+                  { en: "Quiz — cover your word list and try to recall all 10 words from memory.", ar: "اختبر نفسك: غطِّ قائمة كلماتك وحاول تذكّر الكلمات العشر كلها." }
+                ]
+              },
+              {
+                day: 16, skillEn: "SPEAKING & PRONUNCIATION", skillAr: "التحدث والنطق",
+                titleEn: "A memorable dream", titleAr: "حلم لا يُنسى",
+                tasks: [
+                  { en: "Record — record yourself talking about a memorable dream for 2 minutes, no notes.", ar: "سجّل: سجّل نفسك وأنت تتحدث عن حلم لا يُنسى لمدة دقيقتين دون ملاحظات." },
+                  { en: "Pronounce — practice 5 words you find hard to pronounce — slowly, then at normal speed.", ar: "انطق: تدرّب على نطق 5 كلمات صعبة، ببطء ثم بالسرعة العادية." },
+                  { en: "Talk — have a 10-minute voice conversation with an AI about a memorable dream.", ar: "تحدّث: أجرِ محادثة صوتية لمدة 10 دقائق حول حلم لا يُنسى." },
+                  { en: "Imitate — pick one sentence from a video and copy its accent and intonation exactly.", ar: "قلّد: اختر جملة واحدة من فيديو وقلّد لهجتها ونبرتها تماماً." }
+                ]
+              },
+              {
+                day: 17, skillEn: "LISTENING & CULTURE", skillAr: "الاستماع والثقافة",
+                titleEn: "Your favorite animal", titleAr: "حيوانك المفضل",
+                tasks: [
+                  { en: "Watch — watch a short movie or show scene in English with subtitles on.", ar: "شاهد: شاهد مشهداً قصيراً بالإنجليزية مع تشغيل الترجمة." },
+                  { en: "Note — write down 5 new expressions or idioms you heard in it.", ar: "دوّن: اكتب 5 تعبيرات أو عبارات اصطلاحية جديدة سمعتها فيه." },
+                  { en: "Discover — learn one fun fact about English-speaking culture linked to your favorite animal.", ar: "اكتشف: تعلّم معلومة ممتعة مرتبطة بحيوانك المفضل." },
+                  { en: "Discuss — tell an AI what you watched and share your opinion about it.", ar: "ناقش: أخبر ذكاءً اصطناعياً بما شاهدته وشارك رأيك فيه." }
+                ]
+              },
+              {
+                day: 18, skillEn: "REVIEW & REFLECTION", skillAr: "المراجعة والتأمل",
+                titleEn: "The benefits of sport", titleAr: "فوائد الرياضة",
+                tasks: [
+                  { en: "Review — go back over this week's new words, use each one in a new sentence.", ar: "راجع: راجع الكلمات الجديدة لهذا الأسبوع، واستخدم كل كلمة في جملة جديدة." },
+                  { en: "Journal — write a short journal entry about the benefits of sport using words you learned this week.", ar: "اكتب في مذكراتك: اكتب تدوينة قصيرة عن فوائد الرياضة مستخدماً الكلمات التي تعلمتها." },
+                  { en: "Explain — say out loud or tell an AI what you improved on this week.", ar: "اشرح: قل بصوت عالٍ ما الذي حسّنته هذا الأسبوع." },
+                  { en: "Goal — set one small, clear goal for next week.", ar: "الهدف: حدّد هدفاً صغيراً وواضحاً للأسبوع القادم." }
+                ]
+              }
+            ]
+          },
+          {
+            week: "Week 4 • Days 19–24",
+            weekAr: "الأسبوع الرابع: الأيام 19–24",
+            days: [
+              {
+                day: 19, skillEn: "LISTENING & SPEAKING", skillAr: "الاستماع والتحدث",
+                titleEn: "A family tradition", titleAr: "تقليد عائلي",
+                tasks: [
+                  { en: "Watch — watch a short English clip (5–10 min) with subtitles on.", ar: "شاهد: شاهد مقطعاً قصيراً بالإنجليزية (5–10 دقائق) مع تشغيل الترجمة." },
+                  { en: "Listen — listen to a short video/podcast about a family tradition — note 5 new words.", ar: "استمع: استمع إلى فيديو أو بودكاست قصير عن تقليد عائلي، وسجّل 5 كلمات جديدة." },
+                  { en: "Speak — speak out loud for 2 minutes about a family tradition — record yourself.", ar: "تحدّث: تحدّث بصوت عالٍ لمدة دقيقتين عن تقليد عائلي، وسجّل نفسك." },
+                  { en: "Shadow — replay 3 sentences from what you watched and repeat them, copying the rhythm.", ar: "قلّد: أعد تشغيل 3 جمل مما شاهدته وكررها مع تقليد الإيقاع." }
+                ]
+              },
+              {
+                day: 20, skillEn: "READING & WRITING", skillAr: "القراءة والكتابة",
+                titleEn: "Your last weekend", titleAr: "عطلة نهاية الأسبوع الماضية",
+                tasks: [
+                  { en: "Read — read one page or a short article about your last weekend.", ar: "اقرأ: اقرأ صفحة واحدة أو مقالاً قصيراً عن عطلة نهاية الأسبوع الماضية." },
+                  { en: "Summarize — write a 4–5 sentence summary of what you just read.", ar: "لخّص: اكتب ملخصاً من 4–5 جمل لما قرأته للتو." },
+                  { en: "Write — write your own opinion about your last weekend in a short paragraph.", ar: "اكتب: اكتب رأيك الخاص عن عطلة نهاية الأسبوع الماضية في فقرة قصيرة." },
+                  { en: "Vocabulary — list 5 new words from your reading with their meaning.", ar: "المفردات: اكتب 5 كلمات جديدة من قراءتك مع معانيها." }
+                ]
+              },
+              {
+                day: 21, skillEn: "VOCABULARY & GRAMMAR", skillAr: "المفردات والقواعد",
+                titleEn: "Your dream job", titleAr: "وظيفة أحلامك",
+                tasks: [
+                  { en: "Learn — learn 10 new words related to your dream job, write one example sentence for each.", ar: "تعلّم: تعلّم 10 كلمات جديدة مرتبطة بوظيفة أحلامك، واكتب جملة مثال لكل كلمة." },
+                  { en: "Grammar — pick one grammar point and write 5 sentences using it.", ar: "القواعد: اختر نقطة قواعد واحدة واكتب 5 جمل باستخدامها." },
+                  { en: "Use it — use 3 of today's new words i
